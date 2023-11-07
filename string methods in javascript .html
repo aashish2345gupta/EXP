@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript String Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JavaScript String Methods</h2>
+
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString">
+        <button onclick="displayLength()">Length</button>
+        <button onclick="toUpperCase()">To Uppercase</button>
+        <button onclick="toLowerCase()">To Lowercase</button>
+        <button onclick="substring()">Substring (1, 4)</button>
+        <button onclick="replace()">Replace (e with E)</button>
+        <button onclick="concat()">Concat (' JavaScript')</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function displayLength() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.length;
+            showResult(`Length: ${result}`);
+        }
+
+        function toUpperCase() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.toUpperCase();
+            showResult(`Uppercase: ${result}`);
+        }
+
+        function toLowerCase() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.toLowerCase();
+            showResult(`Lowercase: ${result}`);
+        }
+
+        function substring() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.substring(1, 4);
+            showResult(`Substring (1, 4): ${result}`);
+        }
+
+        function replace() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.replace('e', 'E');
+            showResult(`Replace (e with E): ${result}`);
+        }
+
+        function concat() {
+            const inputString = document.getElementById("inputString").value;
+            const result = inputString.concat(' JavaScript');
+            showResult(`Concat (' JavaScript'): ${result}`);
+        }
+
+        function showResult(message) {
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = message;
+        }
+    </script>
+</body>
+</html>

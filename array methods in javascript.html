@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JavaScript Array Methods</h2>
+
+        <p id="result">Array: [1, 2, 3, 4, 5]</p>
+
+        <button onclick="pushToArray()">Push (6)</button>
+        <button onclick="popFromArray()">Pop</button>
+        <button onclick="shiftFromArray()">Shift</button>
+        <button onclick="unshiftToArray()">Unshift (0)</button>
+        <button onclick="spliceArray()">Splice (1, 2)</button>
+        <button onclick="sliceArray()">Slice (1, 4)</button>
+        <button onclick="concatArrays()">Concat ([6, 7, 8])</button>
+        <button onclick="mapArray()">Map (x * 2)</button>
+    </div>
+
+    <script>
+        const originalArray = [1, 2, 3, 4, 5];
+        let resultArray = originalArray.slice(); // Create a copy
+
+        function updateResult() {
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `Array: [${resultArray.join(', ')}]`;
+        }
+
+        function pushToArray() {
+            resultArray.push(6);
+            updateResult();
+        }
+
+        function popFromArray() {
+            resultArray.pop();
+            updateResult();
+        }
+
+        function shiftFromArray() {
+            resultArray.shift();
+            updateResult();
+        }
+
+        function unshiftToArray() {
+            resultArray.unshift(0);
+            updateResult();
+        }
+
+        function spliceArray() {
+            resultArray.splice(1, 2);
+            updateResult();
+        }
+
+        function sliceArray() {
+            resultArray = resultArray.slice(1, 4);
+            updateResult();
+        }
+
+        function concatArrays() {
+            resultArray = resultArray.concat([6, 7, 8]);
+            updateResult();
+        }
+
+        function mapArray() {
+            resultArray = resultArray.map(item => item * 2);
+            updateResult();
+        }
+
+        updateResult();
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Experiment 7</title>
+</head>
+<body style="text-align: center;">
+<header>
+<h1>Aashish Gupta</h1>
+<h2>IP Lab : Experiment 7</h2>
+</header>
+<main>
+<h3>My Contact Infos</h3>
+<p>
+<b>Email : </b> <a
+href="mailto:aashish.gupta@somaiya.edu">aashish.gupta@somaiya.edu</a> <br>
+<b>Phone : </b> <a href="tel:+919082407433">9082407433</a> <br>
+<b>GitHub : </b> <a href="https://github.com/aashish-gupta11">@aashish</a>
+<br>
+<b>Instagram : </b> <a
+href="https://www.instagram.com/">@___aashish___11</a> <br>
+</p>
+<button onclick="displayDate()">Check Date</button>
+<p id="date"></p>
+<form action="">
+<h2>Somaiya Email</h2>
+<input type="text" name="email" id="email" class="input-text" placeholder="" required
+pattern="[a-z].+@somaiya.edu"
+oninvalid="this.setCustomValidity('Please Enter Somaiya Email ID - should end with @somaiya.edu')"
+onchange="try{setCustomValidity('')}catch(e){}">
+<button type="submit">Check Email</button>
+</form>
+</main>
+<br><br>
+<footer>
+Copyright &copy; Aashish Gupta
+</footer>
+</body>
+<script>
+
+
+function displayDate() {
+document.getElementById("date").innerHTML = Date();
+}
+function result() {
+var num1 = document.getElementById("num1").value;
+var num2 = document.getElementById("num2").value;
+var result = parseInt(num1) + parseInt(num2)
+document.getElementById("result").innerHTML = result;
+}
+const days_31 = [1, 3, 5, 7, 8, 10, 12]
+const days_30 = [4, 6, 9, 11]
+var mont = window.prompt('Enter the Month number : ')
+var month = parseInt(mont)
+if (days_31.includes(month)) {
+alert("This Month has 31 days");
+}
+else if (days_30.includes(month)) {
+alert("This Month has 30 days");
+}
+else if (month == 2) {
+alert("This Month has either 28 or 29 days");
+}
+else {
+alert("Invalid Month number");
+}
+</script>
+</html>
