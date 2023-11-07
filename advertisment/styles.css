@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.advertisement {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.highlighted {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffdb4d;
+}
+
+/* Pseudo-classes and Pseudo-elements */
+.advertisement:hover {
+    background-color: #0056b3;
+}
+
+.advertisement::before {
+    content: "🎉";
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.button::before {
+    content: "➡️";
+    margin-right: 5px;
+}
