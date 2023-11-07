@@ -1,0 +1,26 @@
+/* External CSS */
+body {
+    font-family: 'Helvetica', sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+  
