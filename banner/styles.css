@@ -1,0 +1,61 @@
+/* Apply CSS3 Selectors */
+h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .banner, .analytics {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  /* Apply Pseudo-Classes */
+  .banner:hover {
+    background-color: #e0e0e0;
+  }
+  
+  ul li:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+  
+  /* Apply Pseudo-Elements */
+  .banner h2::before {
+    content: " ";
+  }
+  
+  /* Custom Styling for Banner Image */
+  .banner-image {
+    background-image: url('download.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 150px;
+    margin: 20px auto;
+  }
+  
+  /* Custom Styling for Analytics Data */
+  .analytics ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .analytics ul li {
+    padding: 8px;
+  }
+  
+  /* Custom Styling for Analytics Metrics */
+  .impressions {
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .clicks {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .conversion-rate {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
