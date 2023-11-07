@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pharmacy Management System</h1>
+    </header>
+    <main>
+        <section class="medicine-list">
+            <h2>Medicine Inventory</h2>
+            <ul id="medicineInventory">
+                <!-- Medicine items will be dynamically added here using JavaScript -->
+            </ul>
+        </section>
+        <section class="order">
+            <h2>Place an Order</h2>
+            <form id="orderForm">
+                <input type="text" id="medicineName" placeholder="Medicine Name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
